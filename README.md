@@ -9,7 +9,7 @@ i made this bot for my discord server [devils](https://discord.gg/3gM5hpt) to re
 
 1) get a bot token from [here](https://discord.com/developers/applications) and then place it in the config file.
 
-2) then you wanna get a botID from [PandoraBots](https://pandorabots.com/botmaster/en/mostactive) pick a bot from here click on it and on the url section you should see a part thats like botid=b0dafd24ee35a477 you wanna copy the part after the equal sign and put it in the config file by default chomsky is the bot id but you can change it to whatever.
+2) then you wanna get a botID from [PandoraBots](https://pandorabots.com/botmaster/en/mostactive) pick a bot from here click on it and on the url section you should see a part thats like botid=b0dafd24ee35a477 you wanna copy the part after the equal sign and put it in the config file by default chomsky is the bot id in the config file but you can change it to any bot.
 
-3) then fill out the rest of the parts in the config file they're fairly self explanatory.
+3) then fill out the rest of the parts in the config file they're fairly self explanatory and they have comments next to them.
   
