@@ -23,7 +23,7 @@ async def on_message(message):
 
     if message.author == message.author.bot or message.author == client.user:
         return
-    if client.user in message.mentions:
+    if client.user in message.mentions or isinstance(message.channel, discord.channel.DMChannel):
         async with message.channel.typing():
             try:
                 input = re.sub('<@!?{0.user.id}>'.format(client), '', message.content).strip()
