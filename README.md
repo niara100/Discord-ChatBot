@@ -5,7 +5,7 @@ The bot was made with Discord.py 1.3.3 and you'll also need aiohttp to get it ru
 
 i made this bot for my discord server https://discord.gg/3gM5hpt to replace myself.
 
-Setup:
+# Setup:
 
 1) get a bot token from https://discord.com/developers/applications and then place it in the config file.
 
