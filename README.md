@@ -3,7 +3,7 @@ A Discord ChatBot made with Discord.py and pandorabots its very configurable and
 
 The bot was made with Discord.py 1.3.3 and you'll also need aiohttp 3.6.2 to get it running those are the bots only two dependencies. 
 
-i made this bot for my discord server [devils](https://discord.gg/3gM5hpt) to replace myself.
+i made this bot for my discord server to replace myself.
 
 ## 🔧 | Setup
 
