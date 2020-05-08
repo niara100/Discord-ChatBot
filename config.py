@@ -1,8 +1,8 @@
 token = ''
 status = 'Mention me to start chatting' #playing status
 botID = 'b0dafd24ee35a477'
-mentionReply = 'true' #if false the bot wont mention a member when it replies to them
-welcomesEnabled = 'false' #this will make it so the bot will welcome new members
+mentionReply = True #if false the bot wont mention a member when it replies to them
+welcomesEnabled = False #this will make it so the bot will welcome new members
 welcomeChannel =  #the channel where the bot will welcome new members
 welcome_messages = ['welcome',
                     'welcome i hope you enjoy your stay',
