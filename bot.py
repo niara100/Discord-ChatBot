@@ -9,7 +9,7 @@ async def on_ready():
 
 @client.event
 async def on_member_join(member):
-    if config.welcomesEnabled == 'true':
+    if config.welcomesEnabled == True:
         welcome_channel = client.get_channel(config.welcomeChannel)
         time.sleep(random.randrange(2,4))
         await welcome_channel.send("{0} ".format(member) + random.choice(config.welcome_messages))
@@ -18,7 +18,7 @@ async def on_member_join(member):
 async def on_message(message):
 
     User = "<@"+str(message.author.id)+">, "
-    if config.mentionReply == 'false':
+    if config.mentionReply == False:
         User = "("+message.author.name+") "
 
     if message.author == message.author.bot or message.author == client.user:
