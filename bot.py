@@ -28,7 +28,7 @@ async def on_message(message):
             try:
                 input = re.sub('<@!?{0.user.id}>'.format(client), '', message.content).strip()
                 print(input)
-                params = {'botid': config.botID, 'custid': message.author.id, 'input': input or 'Hello'}
+                params = {'botid': config.botID, 'custid': message.author.id, 'input': input.strip('?') or 'Hello'}
                 async with aiohttp.ClientSession().get('https://www.pandorabots.com/pandora/talk-xml', params = params) as resp:
                     if resp.status == 200:
                         text = await resp.text()
