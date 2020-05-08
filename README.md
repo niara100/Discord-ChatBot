@@ -1,11 +1,11 @@
-# Information
+# 📜 | Information
 A Discord ChatBot made with Discord.py and pandorabots its very configurable and easy to self host. this bot was based of jagroshs frost bot which is now very outdated due to the discord.py rewrite ive also greatly improved most of the bot.
 
 The bot was made with Discord.py 1.3.3 and you'll also need aiohttp 3.6.2 to get it running those are the bots only two dependencies. 
 
 i made this bot for my discord server [devils](https://discord.gg/3gM5hpt) to replace myself.
 
-# Setup:
+# 🔧 | Setup
 
 1) get a bot token from [here](https://discord.com/developers/applications) and then place it in the config file.
 
