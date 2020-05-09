@@ -23,7 +23,7 @@ async def on_message(message):
 
     if message.author == message.author.bot or message.author == client.user:
         return
-    if '@everyone' or '@here' in message.content:
+    if message.mention_everyone:
         return
     if client.user in message.mentions or isinstance(message.channel, discord.channel.DMChannel):
         async with message.channel.typing():
