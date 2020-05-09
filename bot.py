@@ -35,7 +35,7 @@ async def on_message(message):
                         text = text[text.find('<that>') + 6:text.rfind('</that>')]
                         text = text.replace('&quot;', '"').replace('&lt;', '<').replace('&gt;', '>').replace('&amp;', '&').replace(
                             '<br>', ' ')
-                        text.strip()
+                        text.lstrip()
                         print("bot message: " + text)
                         await message.channel.send(User + text)
                     else:
