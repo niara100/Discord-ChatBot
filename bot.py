@@ -12,7 +12,7 @@ async def on_member_join(member):
     if config.welcomesEnabled == True:
         welcome_channel = client.get_channel(config.welcomeChannel)
         time.sleep(random.randrange(2,4))
-        await welcome_channel.send("{0} ".format(member) + random.choice(config.welcome_messages))
+        await welcome_channel.send("{0.name}, ".format(member) + random.choice(config.welcome_messages))
 
 @client.event
 async def on_message(message):
@@ -23,11 +23,13 @@ async def on_message(message):
 
     if message.author == message.author.bot or message.author == client.user:
         return
+    if '@everyone' or '@here' in message.content:
+        return
     if client.user in message.mentions or isinstance(message.channel, discord.channel.DMChannel):
         async with message.channel.typing():
             try:
                 input = re.sub('<@!?{0.user.id}>'.format(client), '', message.content).strip()
-                print("User message: " + input)
+                print("{0}: ".format(message.author) + input)
                 params = {'botid': config.botID, 'custid': message.author.id, 'input': input.strip('?') or 'Hello'}
                 async with aiohttp.ClientSession().get('https://www.pandorabots.com/pandora/talk-xml', params = params) as resp:
                     if resp.status == 200:
@@ -35,8 +37,7 @@ async def on_message(message):
                         text = text[text.find('<that>') + 6:text.rfind('</that>')]
                         text = text.replace('&quot;', '"').replace('&lt;', '<').replace('&gt;', '>').replace('&amp;', '&').replace(
                             '<br>', ' ')
-                        text.lstrip()
-                        print("bot message: " + text)
+                        print("{0.user}: ".format(client) + text)
                         await message.channel.send(User + text)
                     else:
                         await message.channel.send("<@"+str(message.author.id)+">, " + random.choice(config.error_message))
