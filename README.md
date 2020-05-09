@@ -13,7 +13,7 @@ i made this bot for my discord server to replace myself.
 
 3) then fill out the rest of the parts in the config file they're fairly self explanatory and they have comments next to them.
 
-4 you can run the bot with the bat file but that only works on windows you can make your own sh file tho or run it with pm2.
+4) you can run the bot with the bat file but that only works on windows you can make your own sh file tho or run it with pm2.
 
 ## 📌 | known issues
 
