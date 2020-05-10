@@ -36,7 +36,7 @@ async def on_message(message):
                         text = await resp.text()
                         text = text[text.find('<that>') + 6:text.rfind('</that>')]
                         text = text.replace('&quot;', '"').replace('&lt;', '<').replace('&gt;', '>').replace('&amp;', '&').replace(
-                            '<br>', ' ')
+                            '<br>', ' ').replace('<a', '').replace('href="', '').replace('" target="_blank">', '').replace('</a>', '')
                         print("{0.user}: ".format(client) + text)
                         await message.channel.send(User + text)
                     else:
